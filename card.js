@@ -177,10 +177,11 @@ function CardArray() {
         for(var i = 0; i<cardCount; ++i) {
             var cardView = document.createElement('img');
             cardView.setAttribute('class', 'card');
+            cardView.style.backgroundRepeat = 'no-repeat';
             cardView.style.transform = getTransformProp(getDeg(i, cardCount));
 
             var c = this.array[i];
-            cardView.src = getCardPath(c);
+            cardView.style.backgroundImage = getCardUrl(c);
 
             view.appendChild(cardView);
         }
